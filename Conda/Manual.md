@@ -9,9 +9,9 @@ Anaconda (Python + R + pacakges, Conda env/package manager)
 1. Get the Miniconda installer script from 
 - https://docs.anaconda.com/free/miniconda/
 -- https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-2. Run the script: `bash Miniconda3-latest-Linux-x86_64.sh`
-3. Export the `conda/bin` to the default `PATH` variable
-4. Run `conda init` to start default env
+1. Run the script: `bash Miniconda3-latest-Linux-x86_64.sh`
+2. Export the `conda/bin` to the default `PATH` variable
+3. Run `conda init` to start default env
 
 Base conda environment is now active on every shell you open.
 
