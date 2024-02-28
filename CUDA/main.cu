@@ -3,7 +3,7 @@
 #include <cmath>
 
 #include "BLAS/axpy.h"
-#include "/usr/local/cuda-12.3/targets/x86_64-linux/include/cuda_runtime.h"
+#include <cassert>
 
 int main()
 {
@@ -43,10 +43,13 @@ int main()
 	//copy back
 	cudaMemcpy(dev_x, x.data(), N * sizeof(float), cudaMemcpyDeviceToHost);
 
+    int i = 0;
     for (auto& value : x)
     {
-        std::cout << value << " ";
+        assert(value == i);
+        i++;
     }
+
 
 	return 0;
 }

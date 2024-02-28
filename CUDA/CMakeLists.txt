@@ -20,4 +20,12 @@ add_executable(
         main.cu
 )
 
-set_target_properties(${PROJECT_NAME} PROPERTIES CUDA_ARCHITECTURE "89")
+set_target_properties(hello_world PROPERTIES CUDA_ARCHITECTURES "50;72;86;89")
+
+target_compile_options(hello_world PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:
+        --generate-line-info
+        --use_fast_math
+        -Xptxas="-v" # show register usage for each kernel on each target arch version
+        >)
+
+
