@@ -14,7 +14,21 @@ df <- df %>%
   )) %>%
   ungroup()
 
-print(df)
+duration <- max(df$end) - min(df$start)
+df_time <- df %>%
+  group_by(worker) %>%
+  mutate(Time = end-start) %>%
+  summarise(ComputationTime = sum(Time),
+            Duration = duration-min(start),
+            Position2 = Position2,
+            IdleTime = Duration-ComputationTime,
+            IdlePercentage = paste0(round(IdleTime/Duration, 4) * 100, "%")
+  ) %>%
+  unique()
+
+print(df_time)
+
+
 
 plt <- df %>%
   ggplot() +
@@ -25,10 +39,14 @@ plt <- df %>%
       x = start,
       xend = end,
       color = name),
-    linewidth = 10) +
-    labs(title="Gantt Chart",
+    linewidth = 10
+  ) +
+  geom_label(data=df_time, mapping = aes(x=duration, y = Position2+1, label=IdlePercentage)) +
+  labs(title="Gantt Chart",
        x = "Time(s)",
        y = "Worker",
        colour = "Name") +
   theme_bw()
+
+
 print(plt)
