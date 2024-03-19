@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.26.4)  # CMake version check
 
 project(hello_world CXX CUDA)
 
-enable_language(CUDA)
-enable_language(CXX)
+#enable_language(CUDA)
+#enable_language(CXX)
 find_package(CUDAToolkit REQUIRED)
 
 set (CMAKE_CXX_STANDARD 23)             # Enable c++23 standard
