@@ -29,7 +29,6 @@ df_time <- df %>%
 print(df_time)
 
 
-
 plt <- df %>%
   ggplot() +
   geom_segment(mapping =
@@ -46,7 +45,7 @@ plt <- df %>%
        x = "Time(s)",
        y = "Worker",
        colour = "Name") +
-  theme_bw()
-
+  theme_bw() +
+  geom_vline(xintercept = 1, linetype="dashed", color = "black", size=1.0)
 
 print(plt)

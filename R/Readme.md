@@ -8,3 +8,7 @@ This already install packages for data manipulation and visualization like:
 - tidyverse
 - dplyr
 - ggplot2
+- shiny
+
+
+Notes about the reading and learning of the book [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com) can be found in the `InteractiveVisualizations` directory.

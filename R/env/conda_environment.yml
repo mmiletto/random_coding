@@ -21,11 +21,11 @@ dependencies:
   - bwidget=1.9.14=ha770c72_1
   - bzip2=1.0.8=hd590300_5
   - c-ares=1.27.0=hd590300_0
-  - ca-certificates=2024.2.2=hbcca054_0
+  - ca-certificates=2024.3.11=h06a4308_0
   - cached-property=1.5.2=hd8ed1ab_1
   - cached_property=1.5.2=pyha770c72_1
   - cairo=1.18.0=h3faef2a_0
-  - certifi=2024.2.2=pyhd8ed1ab_0
+  - certifi=2024.2.2=py312h06a4308_0
   - cffi=1.16.0=py312hf06ca03_0
   - charset-normalizer=3.3.2=pyhd8ed1ab_0
   - comm=0.2.1=pyhd8ed1ab_0
@@ -190,6 +190,7 @@ dependencies:
   - r-conflicted=1.2.0=r43h785f33e_1
   - r-cpp11=0.4.7=r43hc72bb7e_0
   - r-crayon=1.5.2=r43hc72bb7e_2
+  - r-crosstalk=1.2.0=r43h6115d3f_0
   - r-crul=1.4.0=r43h785f33e_1
   - r-curl=5.1.0=r43hf9611b0_0
   - r-data.table=1.15.2=r43h029312a_0
@@ -272,6 +273,7 @@ dependencies:
   - r-pbdzmq=0.3_11=r43hc2df49b_0
   - r-pillar=1.9.0=r43hc72bb7e_1
   - r-pkgconfig=2.0.3=r43hc72bb7e_3
+  - r-plotly=4.10.2=r43h6115d3f_0
   - r-plyr=1.8.9=r43ha503ecb_0
   - r-prettyunits=1.2.0=r43hc72bb7e_0
   - r-proc=1.18.5=r43ha503ecb_0
