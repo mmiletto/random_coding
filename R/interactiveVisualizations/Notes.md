@@ -1,5 +1,13 @@
 # Interactive web-based data visualization with R, plotly, and shiny
 
+## R useful functions
+
+- group_by()
+- summarise()
+- arrange()
+- top_n()
+- mutate()
+
 ## 2. Overview
 
 Two different forms
@@ -34,3 +42,38 @@ interactive features, so sometimes it’s desirable to modify the return values 
 
 
 ## 3. Scattered foundations
+
+**Semantic mappings**: Alpha, Color, Symbols, Stroke and span, Size
+
+A plotly.js figure contains one (or more) `trace(s)`, and every trace has a type. One trace type example is `scatter`.
+
+Traces can have `markers` -> `add_markers(category, name = "Item Category")`
+
+TIP: consider using `toWebGL()` to render plots using Canvas rather than SVG, example in cases with lots 
+(tens of thousands) of data points for scatter plots.
+
+Mapping a discrete variable to color produces one `trace` per `category`, this can impact the performance of the plot
+in exchange for more interactivity.
+
+`color` and `stroke` -> fill and outline.
+
+### Lines
+
+TIP: Generally speaking, it’s hard to perceive more than 8 different colors/linetypes/symbols in a given plot, so \
+sometimes we have to filter data to use these effectively.
+
+### Other plots
+
+- Dumbell (example km per liter in the city or highway)
+- Candlestick
+- Density (like an hist)
+- Parallel coordinates
+
+### Polygons
+Polygons can be use to draw many things, but perhaps the most familiar application where you might want to use 
+`add_polygons()` is to draw geo-spatial objects
+
+Atip: Can use `split` to categorise and separate data.
+
+### Ribbons
+Use them to show uncertainty
