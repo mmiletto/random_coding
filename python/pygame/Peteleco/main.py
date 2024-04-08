@@ -40,7 +40,7 @@ def main():
     # Set up the screen
     screen_width, screen_height = 1000, 1000
     pieces_surface = pygame.Surface((screen_width, screen_height), pygame.SRCALPHA)
-    window = pygame.display.set_mode((screen_width, screen_height))
+    window = pygame.display.set_mode((screen_width, screen_height), pygame.RESIZABLE)
 
     pygame.display.set_caption("Peteleco Board Game")
 
@@ -97,9 +97,6 @@ def main():
         elif len(pieces) > 0 and index < len(pieces):
             pieces[index].deselect()
 
-        # Fill the canvas with the background color
-        window.fill(background_color_white)
-
         # Check for collisions
         for i, p1 in enumerate(pieces[:-1]):
             for j, p2 in enumerate(pieces[i+1:]):
@@ -152,7 +149,10 @@ def main():
             piece.draw(pieces_surface)
 
         # Update the display
+        # Fill the canvas with the background color
+        window.fill(background_color_white)
         window.blit(pieces_surface, (0, 0, 0, 0))
+
         pygame.display.flip()
         # todo update can be used to redraw only some parts of the screen. Like we dont need to redraw the board
         # pygame.display.update()
