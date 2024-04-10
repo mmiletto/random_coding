@@ -7,6 +7,9 @@
 - arrange()
 - top_n()
 - mutate()
+- left_join()
+- lapply()
+- split()
 
 ## 2. Overview
 
@@ -77,3 +80,17 @@ Atip: Can use `split` to categorise and separate data.
 
 ### Ribbons
 Use them to show uncertainty
+
+
+
+## 4. Maps
+
+-> Not very usefull section for me. But it has lots of good examples on geospatial data representation.\
+
+## 5. Bars and Histograms
+
+`add_bars()`
+	require both X and Y variables
+
+`add_histogram()`
+	require only one dimensional variable
