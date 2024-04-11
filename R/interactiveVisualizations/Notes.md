@@ -4,8 +4,8 @@
 
 - group_by()
 - summarise()
-- arrange()
-- top_n()
+- arrange() -> sort
+- top_n() -> filter top n entries
 - mutate()
 - left_join()
 - lapply()
@@ -90,7 +90,36 @@ Use them to show uncertainty
 ## 5. Bars and Histograms
 
 `add_bars()`
-	require both X and Y variables
+- require both X and Y variables
 
 `add_histogram()`
-	require only one dimensional variable
+- require only one dimensional variable
+
+
+## 6. Boxplots
+
+`add_boxplot()`
+- Receives one value, and can ble split into a categorical variable x. 
+- It is usefull to sort boxplots by something meaningfull, like the median.
+
+## 7. 2D Frequencies
+
+`add_heatmap()`
+- 2D analog of `add_bars()`
+
+`add_histogram2d()` 
+- 2D analog of `add_histogram()`
+- `zsmooth` parameter changes the number of bins. nbins are defined in x and y.
+
+## 8. 3D Charts
+
+Adding a z attribute to `plot_ly()` it will know how to render markers, lines, and paths in 
+three dimensions.
+
+To add axes label to a 3D plot we must use `scene` and `layout()`
+
+`add_surface()`
+- Like a 3D heatmap
+
+
+## 9. Introduction to publishing views
