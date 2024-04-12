@@ -123,3 +123,12 @@ To add axes label to a 3D plot we must use `scene` and `layout()`
 
 
 ## 9. Introduction to publishing views
+
+How to save plotly graphs as HTML documents or embed them into larger HTML documents.
+Or export lots of plots at once `orca()` function: Static image exporting via orca.
+
+## 10. Saving and embedding HTML
+## 11. Exporting Static Images
+Either use `orca` form `plotly` or modify and download the image from your browser.
+## 12. Editing views for publishing
+Can create a shiny app that listens to the `plotly_relayout`. Adjust tags, for example.
