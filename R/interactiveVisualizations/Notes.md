@@ -132,3 +132,31 @@ Or export lots of plots at once `orca()` function: Static image exporting via or
 Either use `orca` form `plotly` or modify and download the image from your browser.
 ## 12. Editing views for publishing
 Can create a shiny app that listens to the `plotly_relayout`. Adjust tags, for example.
+
+# 13. Arranging views'
+
+`subplot()` allows to merge multiple plotly objects.
+	- nrows
+	- heights 
+	- widths -> can define the number of columns
+
+` subplot()` can be used recursively, as it returns a plotly object.
+
+
+## 13.1 Scatterplot matrices
+Alternative to composing multiple interacting plotly objects.
+`splom` See https://plot.ly/r/splom/ for more options related to the splom trace type.
+
+
+## 13.2 Other ways to compose plots
+
+ggplot2 `facet_wrap` and `facet_grid` or `ggmatrix`
+
+
+## 13.3 Arranging htmlwidgets
+
+A `plotly` object is a `htmlwidgets`, which are `htmltools`. So any arranging method for the latter will work for 
+the others. Such methods are:
+### 13.3.1 flexdashboard
+### 13.3.2 Bootstrap’s grid layout
+### 13.3.3  CSS flexbox
