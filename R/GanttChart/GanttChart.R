@@ -48,4 +48,4 @@ plt <- df %>%
   theme_bw() +
   geom_vline(xintercept = 1, linetype="dashed", color = "black", size=1.0)
 
-print(plt)
+ggsave("./GanttChart/gantt_chart.png", plot = plt, width = 2400, height = 1600, units = c("px"))
