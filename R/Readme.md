@@ -14,7 +14,6 @@ This already install packages for data manipulation and visualization like:
 Notes about the reading and learning of the book [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com) can be found in the `InteractiveVisualizations` directory.
 
 
-
 ## Future Idea for app
 Daily finance app with data visualization.
 
